@@ -36,13 +36,13 @@ while running:
     screen.fill((0, 0, 0))
     # рисуем на экране сохраненное на втором холсте
     screen.blit(screen2, (0, 0))
-    t =v * clock.tick() / 1000
+    t = v * clock.tick() / 1000
 
     if ball:
         for i in range(len(ball)):
             x_pos, y_pos = ball[i]
 
-            if y_pos <= height -  t - 10:
+            if y_pos <= height - t - 10:
                 y_pos += t
                 ball[i] = x_pos, y_pos
                 pygame.draw.circle(screen, ball_color[i], (x_pos, int(y_pos)), ball_radius)
